@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<p>qrcode</p>
+<button onclick="location.href='{% url 'qrcodes:output' %}'"> Execute script</button><hr>
+{% csrf_token %}
+{% endblock content %}

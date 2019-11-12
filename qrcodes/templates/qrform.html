@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Add new qr code</p>
+<form action="{% url 'qrcodes:qr_topic' %}" method='POST'>
+{% csrf_token %}
+{{ form.as_p }}
+<button name="submit">add qrcode</button>
+</form>
+{% endblock content %}

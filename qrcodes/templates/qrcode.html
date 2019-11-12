@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p>QrCode</p>
+<ul>
+	{% for qr in topics %}
+	<li> {{ qr }}</li>
+	{% empty %}
+	<li> No qrcode added yet</li>
+	{% endfor %}
+
+</ul>
+<a href="{% url 'qrcodes:qr_topic' %}"> Add new QRCode </a>
+{% endblock content %}
